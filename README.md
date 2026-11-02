@@ -18,44 +18,7 @@ All 43 directed test cases pass with zero failures across 15 test programs cover
 
 ## Architecture Overview
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        OoO Core                                 │
-│                                                                 │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────────┐     │
-│  │  Fetch   │→ │  Branch  │  │  Decode  │→ │   Dispatch   │     │
-│  │  Unit    │  │Predictor │  │  Unit    │  │    Unit      │     │
-│  └──────────┘  └──────────┘  └──────────┘  └──────┬───────┘     │
-│                                                     │           │
-│                              ┌──────────────────────┼──────┐    │
-│                              │                      │      │    │
-│                         ┌────▼────┐  ┌──────┐  ┌───▼───┐  │     │
-│                         │   ROB   │  │ RAT  │  │  IQ   │  │     │
-│                         │         │  │      │  │       │  │     │
-│                         └────┬────┘  └──────┘  └───┬───┘  │     │
-│                              │       ┌──────┐       │      │    │
-│                              │       │ Free │       │      │    │
-│                              │       │ List │       │      │    │
-│                              │       └──────┘       │      │    │
-│                              │       ┌──────┐  ┌────▼──────┤    │
-│                              │       │ PRF  │  │  Issue    │    │
-│                              │       │  96  │  │  Logic    │    │
-│                              │       │ regs │  └────┬──────┘    │
-│                              │       └──────┘       │           │
-│                              │              ┌────────▼────────┐ │
-│                              │              │  Execution Units│ │
-│                              │              │                 │ │
-│                              │              │ ALU0  ALU1      │ │
-│                              │              │ Branch Unit     │ │
-│                              │              │ MUL   DIV       │ │
-│                              │              │ LD/ST Unit      │ │
-│                              │              └────────┬────────┘ │
-│                              │                       │          │
-│                         ┌────▼───────────────────────▼────┐     │
-│                         │        LSQ + CSR                │      │
-│                         └─────────────────────────────────┘     │
-└─────────────────────────────────────────────────────────────────┘
-```
+<img width="3440" height="2800" alt="rv64im-ooo-block-diagram" src="https://github.com/user-attachments/assets/0bb1c748-b3a4-4ee5-87c3-cac03c3ad2c2" />
 
 ### Key Microarchitectural Parameters
 
