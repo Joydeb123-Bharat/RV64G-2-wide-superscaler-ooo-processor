@@ -1,4 +1,4 @@
-# RV64IM 2-Wide Superscalar Out-of-Order Processor
+<img width="3440" height="2800" alt="RV64G OoO Processor-selection" src="https://github.com/user-attachments/assets/94bf6386-59f0-4397-9dce-bcee65d71a71" /># RV64IM 2-Wide Superscalar Out-of-Order Processor
 
 A fully functional, simulation-verified **RV64IM 2-wide superscalar out-of-order processor** implemented in SystemVerilog, targeting Vivado 2025.2 / XSim. Built as a portfolio project demonstrating advanced computer architecture and RTL design skills at a level competitive for senior roles at Apple Silicon, NVIDIA, AMD, and Qualcomm.
 
@@ -18,7 +18,8 @@ All 43 directed test cases pass with zero failures across 15 test programs cover
 
 ## Architecture Overview
 
-<img width="3440" height="2800" alt="rv64im-ooo-block-diagram" src="https://github.com/user-attachments/assets/0bb1c748-b3a4-4ee5-87c3-cac03c3ad2c2" />
+<img width="3440" height="2800" alt="RV64G OoO Processor-selection" src="https://github.com/user-attachments/assets/2784f42e-5fbe-4d4c-9b40-c7471b2f1d2b" />
+
 
 ### Key Microarchitectural Parameters
 
